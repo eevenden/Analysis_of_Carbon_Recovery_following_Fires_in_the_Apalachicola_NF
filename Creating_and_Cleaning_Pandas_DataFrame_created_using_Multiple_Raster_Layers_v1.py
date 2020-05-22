@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 #Title: Creating and Cleaning A Pandas Dataframe made of Multiple Geospatial Raster Layers - Florida Fire Study
 #Author: Emily Evenden
 #Date: May 22, 2020
@@ -33,14 +30,8 @@ from PIL import Image
 import os
 
 
-# In[ ]:
-
-
 #Set working directory
 dir = os.chdir("C:\\Users\\Emily\\Documents\\Summer_2020\\Py_DataScience_and_MachineLearning\\original\\FL_Script\\Python_FL_Project\\Python_FL_Project")
-
-
-# In[3]:
 
 
 #This line deactivates the zip bomb safety in Python 3. Because I am working with large files, I want to deactivate the size limit imposed by the zip bomb check.
@@ -65,9 +56,6 @@ Burn_Year = np.asarray(Image.open('Smaller_FL_years_disturb_MTSB.tif'))
 print('Ok')
 
 
-# In[4]:
-
-
 #This section flattens each array so the 2D data is converted to 1D data. This allows each raster layer to become a column in the dataframe.
 
 FL_AGB_1990 = AGB_1990.flatten()
@@ -83,23 +71,14 @@ FL_Burn_Year = Burn_Year.flatten()
 print('Ok')
 
 
-# In[5]:
-
-
 #Here I stack all of the flattened arrays and transpose them into vertical columns. This creates a larger 2D array, FL_arr, from the multiple 1D arrays.
 FL_arr = np.vstack([FL_AGB_1990, FL_AGB_2000, FL_AGB_2010, FL_Forest_Type, FL_NEP_1990, FL_NEP_2000, FL_NEP_2010, FL_Burn_Year]).T
-
-
-# In[6]:
 
 
 #I created a Pandas dataframe from the vertically stacked 2D array, FL_arr, and assigned column names.
 FL_Data = pd.DataFrame(FL_arr, columns=['AGB_1990', 'AGB_2000','AGB_2010', 'Forest_Type', 'NEP_1990', 'NEP_2000', 'NEP_2010', 'Burn_Year'])
 #Check point
 print (FL_Data)
-
-
-# In[8]:
 
 
 #Now that the dataframe is created, I want to remove rows that are not necessary for the analysis.
@@ -112,9 +91,6 @@ FL_Data['Burn_Year'].unique()
 FL_Data = FL_Data[(FL_Data.Burn_Year != 0) & (FL_Data.Burn_Year != 16) & (FL_Data.Burn_Year != 20) & (FL_Data.Burn_Year != 40)]
 #Check that pixels with unwanted years were removed
 FL_Data['Burn_Year'].unique()
-
-
-# In[31]:
 
 
 '''
@@ -137,9 +113,6 @@ FL_Data['Burn_Scar_Age'] = 40 - FL_Data['Burn_Year']
 print (FL_Data)
 
 
-# In[10]:
-
-
 #I want to create categorize the pixel as having a burn severity of High, Medium, and Low. I decided the assign these labels based on the percent of aboveground biomass lost by a pixel following a fire.
 #First, I created a new column calculating the percent aboveground biomass lost. For pixel burned before 2001, I calculated this using AGB_1990 and AGB_2000.
 FL_Data['Burn_Severity'] = ((FL_Data['AGB_1990']-FL_Data['AGB_2000'])/FL_Data['AGB_1990']*100)
@@ -147,9 +120,6 @@ FL_Data['Burn_Severity'] = ((FL_Data['AGB_1990']-FL_Data['AGB_2000'])/FL_Data['A
 FL_Data.loc[(FL_Data.Date>2000), 'Burn_Severity'] = ((FL_Data['AGB_2000']-FL_Data['AGB_2010'])/FL_Data['AGB_2000']*100)
 #Check point
 print (FL_Data)
-
-
-# In[11]:
 
 
 #After creating a numeric variable to measure burn severity, I want to place pixels into categorical bins.
@@ -161,9 +131,6 @@ cut_bins = [0, 30, 70, 100]
 FL_Data['Severity_Label'] = pd.cut(FL_Data['Burn_Severity'], bins=cut_bins, labels=bs_labels)
 #Check point
 print (FL_Data)
-
-
-# In[29]:
 
 
 #Finally, I want to replace the numeric codes signifying 'Forest_Type' with descriptive str labels because it's more intuitive to read.
@@ -179,10 +146,3 @@ FL_Data['Forest_Type'].replace(forest_dict, inplace=True)
 print (FL_Data)
 
 #Now my dataframe is ready for further analysis.
-
-
-# In[ ]:
-
-
-
-
