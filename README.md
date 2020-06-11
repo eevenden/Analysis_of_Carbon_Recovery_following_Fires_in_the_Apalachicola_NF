@@ -1,4 +1,4 @@
-# Analysis of Carbon Recovery following Fires in the Appalachicola NF
+# Analysis of Carbon Recovery following Fires in the Appalachicola National Forest
 
 The purpose of this script to to use advanced Python packages to create a dataframe from multiple geospatial raster layers. 
 The dataframe will then be used for data visualization and regression analysis. The aim of this analysis is to see how
