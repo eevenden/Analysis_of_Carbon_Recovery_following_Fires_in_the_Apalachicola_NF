@@ -11,3 +11,5 @@ Forest Type; and Year of Fire Disturbance.
 
 The raster layer were preprocessed using TerrSet prior to using them in this script. All layers have a have an AlbersUS83 projection
 and have a 30m resolution.
+
+![Histogram_Severity](https://user-images.githubusercontent.com/54719919/84538480-b6926580-acbf-11ea-8483-f2072d5e7ed9.png)
