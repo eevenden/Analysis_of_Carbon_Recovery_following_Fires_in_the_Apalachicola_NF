@@ -20,7 +20,9 @@ and have a 30m resolution.
 
 **Figure 2.** shows the frequency of moderate and high-severity burned pixels by year of fire disturbance. Notice there are no observations for the years 2002 & 2003. Overall, there is a higher frequency of burned pixels in 2008 & 2009. This indicates the was either an increase in fire frequency or an increase in the total area of Longleaf and Slash Pine fires in the years closest to 2010. 
 
-![Histogram_Severity](https://user-images.githubusercontent.com/54719919/84709972-425ef880-af31-11ea-8410-3fe7421b5b7d.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/54719919/84709972-425ef880-af31-11ea-8410-3fe7421b5b7d.png)"/>
+</p>
 
 **Figure 3.** displays a scatterplot of Aboveground Biomass and Net Ecosystem Productivity at 2010. This was done to explore potential multicollinearity. Based on this chart, total aboveground biomass and net ecosystem productivity are not highly correlated because net ecosystem productivity can vary greatly at one value of aboveground biomass. 
 
