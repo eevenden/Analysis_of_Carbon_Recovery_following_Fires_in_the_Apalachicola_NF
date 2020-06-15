@@ -14,7 +14,7 @@ The raster layer were preprocessed using TerrSet prior to using them in this scr
 and have a 30m resolution.
 
 ## Methods
-**Figure 1.** is a screenshot of the dataframe I created through Pandas. This dataframe consists of 189,220 observations and 14 columns (not all pictured here). Each observation is a burned pixel. The columns used for the final analysis are the Date and Age of each fire, Forest Type, Burn Severity, Aboveground Biomass at 2010, and Net Ecosystem Productivity at 2010. Burn Severity was assigned based on a pixel's decrease in Biomass before and after a fire. Those with >70% loss were labeled as "Severe" while thouse with 31-70% loss were labeled as "Moderate". There were few pixels with less than a 31% reduction in aboveground biomass, therefore they were removed from the analysis.
+**Figure 1.** is a screenshot of the dataframe I created through Pandas. This dataframe consists of 189,220 observations and 14 columns (not all pictured here). Each observation is a burned pixel. The columns used for the final analysis are the Date and Age of the fires, Forest Type, Burn Severity, Aboveground Biomass at 2010, and Net Ecosystem Productivity at 2010. Burn Severity was assigned based on a pixel's decrease in Biomass before and after a fire. See the code comments for additional information.
 
 ![FL_Data_Screenshot](https://user-images.githubusercontent.com/54719919/84538971-9dd67f80-acc0-11ea-8d72-a9695f375f3d.png)
 
@@ -35,12 +35,14 @@ and have a 30m resolution.
 
 ![FacetGrid_AGB_Mean](https://user-images.githubusercontent.com/54719919/84539159-e857fc00-acc0-11ea-86e0-2519fe9f1313.png)
 
-**Figures 5a. and 5b.** are scatterplots showing the NEP at 2010 for the different-aged burn scars. The moderate-severity burned pixels and the high-severity burn pixels show starkly different trends. For moderate severity burns, both the range and the mean NEP values remains relatively consistent for every year following a burn. For the high-severity burns, the range and mean of NEP values per pixel varies much more as a burn scar ages. In Figure 3a, one can see that the NEP is negative following some severe burns, meaning the stand becomes a carbon sink. However, for this particular study, the average NEP is still positive in the years immediately 
+**Figures 5a. and 5b.** are scatterplots showing the NEP at 2010 for the different-aged burn scars. The moderate-severity burned pixels and the high-severity burn pixels show slightly different trends. For moderate severity burns, the range of NEP values is narrower and the mean remain more consistent for every year following a burn compared to severe burns. For the severe burns, the range and mean of NEP values per pixel varies more when the burn scar is new. In Figure 4b, one can see that the mean NEP is negative for the first two years following a severe burn, meaning the stand becomes a carbon source during this time.
 
 **Figure 5a.**
+
 ![FacetGrid_NEP_Raw](https://user-images.githubusercontent.com/54719919/84539296-23f2c600-acc1-11ea-9b2a-5ae87d8a2c99.png)
 
 **Figure 5b.**
+
 ![FacetGrid_NEP_Mean](https://user-images.githubusercontent.com/54719919/84539280-1e957b80-acc1-11ea-8487-c63688ec1fa0.png)
 
 ##Linear Regression Results
