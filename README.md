@@ -31,6 +31,7 @@ and have a 30m resolution.
 **Figure 4a.**
 
 ![FacetGrid_AGB_Raw](https://user-images.githubusercontent.com/54719919/84539151-e42bde80-acc0-11ea-8c91-6b51d7c6ff2e.png)
+
 **Figure 4b.**
 
 ![FacetGrid_AGB_Mean](https://user-images.githubusercontent.com/54719919/84539159-e857fc00-acc0-11ea-86e0-2519fe9f1313.png)
@@ -46,21 +47,31 @@ and have a 30m resolution.
 ![FacetGrid_NEP_Mean](https://user-images.githubusercontent.com/54719919/84539280-1e957b80-acc1-11ea-8487-c63688ec1fa0.png)
 
 ##Linear Regression Results
+
 ![MOD_AGB](https://user-images.githubusercontent.com/54719919/84541010-84373700-acc4-11ea-907c-6098c3cc61d7.png)
+
 ![MOD_AGB_Quad](https://user-images.githubusercontent.com/54719919/84541011-84373700-acc4-11ea-8aa4-6234b7e3d349.png)
 
 #Quadratic Regression Results
+
 ![MOD_NEP](https://user-images.githubusercontent.com/54719919/84541012-84cfcd80-acc4-11ea-8561-f1afb823aaa2.png)
+
 ![MOD_NEP_Quad](https://user-images.githubusercontent.com/54719919/84541013-84cfcd80-acc4-11ea-843c-427f66798d2d.png)
 
 ##Linear Regression Results
+
 ![SEV_AGB](https://user-images.githubusercontent.com/54719919/84541025-89948180-acc4-11ea-99df-9d5aef485481.png)
+
 ![SEV_AGB_Quad](https://user-images.githubusercontent.com/54719919/84541026-89948180-acc4-11ea-98c1-434bc46c605b.png)
 
 ##Quadratic Regression Results
+
 ![SEV_NEP](https://user-images.githubusercontent.com/54719919/84541027-8a2d1800-acc4-11ea-8b86-71c9ffd02dd8.png)
+
 ![SEV_NEP_Quad](https://user-images.githubusercontent.com/54719919/84541028-8a2d1800-acc4-11ea-9885-dc0ec1bf43be.png)
 
 ##F-Statistic Results
+
 ![F_Stat_Mod_NEP](https://user-images.githubusercontent.com/54719919/84541023-89948180-acc4-11ea-8058-696b55d432fe.png)
+
 ![F_Stat_Sev_NEP](https://user-images.githubusercontent.com/54719919/84541024-89948180-acc4-11ea-852b-3294fa0081c8.png)
