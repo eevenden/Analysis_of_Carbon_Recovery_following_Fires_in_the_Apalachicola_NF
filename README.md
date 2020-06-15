@@ -13,7 +13,7 @@ Forest Type; and Year of Fire Disturbance.
 The raster layer were preprocessed using TerrSet prior to using them in this script. All layers have a have an AlbersUS83 projection
 and have a 30m resolution.
 
-## Methods Explained
+## Methods
 **Figure 1.** is a screenshot of the dataframe I created through Pandas. This dataframe consists of 189,220 observations and 14 columns (not all pictured here). Each observation is a burned pixel. The columns used for the final analysis are the Date and Age of each fire, Forest Type, Burn Severity, Aboveground Biomass at 2010, and Net Ecosystem Productivity at 2010. Burn Severity was assigned based on a pixel's decrease in Biomass before and after a fire. Those with >70% loss were labeled as "Severe" while thouse with 31-70% loss were labeled as "Moderate". There were few pixels with less than a 31% reduction in aboveground biomass, therefore they were removed from the analysis.
 
 **Figure 1.**
