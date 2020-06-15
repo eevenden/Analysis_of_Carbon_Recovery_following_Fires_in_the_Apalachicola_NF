@@ -24,8 +24,11 @@ Figure 3. displays a scatterplot of Aboveground Biomass and Net Ecosystem Produc
 
 ![Scatterplot_AGB_NEP](https://user-images.githubusercontent.com/54719919/84538629-f9ecd400-acbf-11ea-9b05-47327d0c5541.png)
 
-![FacetGrid_AGB_Raw](https://user-images.githubusercontent.com/54719919/84539151-e42bde80-acc0-11ea-8c91-6b51d7c6ff2e.png)
+Figures 4a. and 4b. are scatterplots showing the aboveground biomass in 2010 for different-aged burn scars. Figure 4a shows the aboveground biomass at 2010 for every observation, while Figure 4b. shows the mean aboveground biomass at 2010 for moderate and severely burned pixels at every year. The mean was chosen for Figure 2b, as opposed to the median, because many pixels had repeating values if they were a part of the same burn scar and the mean was more sensitive to the range of aboveground biomass values across fires. For both moderate and high-severity burns, the aboveground biomass increases as the burn scar ages.
 
+4a.
+![FacetGrid_AGB_Raw](https://user-images.githubusercontent.com/54719919/84539151-e42bde80-acc0-11ea-8c91-6b51d7c6ff2e.png)
+4b.
 ![FacetGrid_AGB_Mean](https://user-images.githubusercontent.com/54719919/84539159-e857fc00-acc0-11ea-86e0-2519fe9f1313.png)
 
 ![FacetGrid_NEP_Raw](https://user-images.githubusercontent.com/54719919/84539296-23f2c600-acc1-11ea-9b2a-5ae87d8a2c99.png)
