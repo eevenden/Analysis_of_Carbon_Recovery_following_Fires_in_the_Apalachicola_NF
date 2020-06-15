@@ -16,19 +16,13 @@ and have a 30m resolution.
 ## Methods
 **Figure 1.** is a screenshot of the dataframe I created through Pandas. This dataframe consists of 189,220 observations and 14 columns (not all pictured here). Each observation is a burned pixel. The columns used for the final analysis are the Date and Age of each fire, Forest Type, Burn Severity, Aboveground Biomass at 2010, and Net Ecosystem Productivity at 2010. Burn Severity was assigned based on a pixel's decrease in Biomass before and after a fire. Those with >70% loss were labeled as "Severe" while thouse with 31-70% loss were labeled as "Moderate". There were few pixels with less than a 31% reduction in aboveground biomass, therefore they were removed from the analysis.
 
-**Figure 1.**
-
 ![FL_Data_Screenshot](https://user-images.githubusercontent.com/54719919/84538971-9dd67f80-acc0-11ea-8d72-a9695f375f3d.png)
 
 **Figure 2.** shows the frequency of moderate and high-severity burned pixels by year of fire disturbance. Notice there are no observations for the years 2002 & 2003. Overall, there is a higher frequency of burned pixels in 2008 & 2009. This indicates the was either an increase in fire frequency or an increase in the total area of Longleaf and Slash Pine fires in the years closest to 2010. 
 
-**Figure 2.**
-
 ![Histogram_Severity](https://user-images.githubusercontent.com/54719919/84709972-425ef880-af31-11ea-8410-3fe7421b5b7d.png)
 
 **Figure 3.** displays a scatterplot of Aboveground Biomass and Net Ecosystem Productivity at 2010. This was done to explore potential multicollinearity. Based on this chart, total aboveground biomass and net ecosystem productivity are not highly correlated because net ecosystem productivity can vary greatly at one value of aboveground biomass. 
-
-**Figure 3.**
 
 ![Scatterplot_AGB_NEP](https://user-images.githubusercontent.com/54719919/84538629-f9ecd400-acbf-11ea-9b05-47327d0c5541.png)
 
@@ -45,6 +39,7 @@ and have a 30m resolution.
 
 **Figure 5a.**
 ![FacetGrid_NEP_Raw](https://user-images.githubusercontent.com/54719919/84539296-23f2c600-acc1-11ea-9b2a-5ae87d8a2c99.png)
+
 **Figure 5b.**
 ![FacetGrid_NEP_Mean](https://user-images.githubusercontent.com/54719919/84539280-1e957b80-acc1-11ea-8487-c63688ec1fa0.png)
 
