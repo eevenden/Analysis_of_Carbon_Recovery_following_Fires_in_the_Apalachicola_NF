@@ -1,4 +1,4 @@
-# Analysis of Carbon Recovery following Fires in the Longleaf Pine Forests of the Appalachicola National Forest
+# Carbon Dynamics following Fires in Longleaf & Slash Pine Stands of the Appalachicola National Forest
 
 ## Introduction
 The purpose of this script to to use advanced Python packages to create a dataframe from multiple geospatial raster layers. 
