@@ -1,4 +1,4 @@
-# Carbon Recovery Analysis following Fires in Longleaf & Slash Pine Stands of the Appalachicola National Forest
+# Analyzing Carbon Dynamics following Fires in Longleaf & Slash Pine Stands of the Appalachicola National Forest
 
 ## Introduction
 The purpose of this script to to use advanced Python packages to create a dataframe from multiple geospatial raster layers. 
@@ -62,6 +62,8 @@ and have a 30m resolution.
 
 ### Regression Results
 **Moderate Burns - Linear Regression**
+One can find the results of both linear and non-linear regressions used to model the relationship between aboveground biomass and burn scar age below.
+
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541010-84373700-acc4-11ea-907c-6098c3cc61d7.png">
 </p>
