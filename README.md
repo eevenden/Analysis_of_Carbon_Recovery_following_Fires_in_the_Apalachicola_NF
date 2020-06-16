@@ -34,13 +34,13 @@ and have a 30m resolution.
 
 **Figures 4a. and 4b.** are scatterplots showing the aboveground biomass in 2010 for different-aged burn scars. Figure 4a shows the aboveground biomass at 2010 for every observation, while Figure 4b. shows the mean aboveground biomass at 2010 for moderate and severely burned pixels at every year. The mean was chosen for Figure 2b, as opposed to the median, because many pixels had repeating values if they were a part of the same burn scar and the mean was more sensitive to the range of aboveground biomass values across fires. For both moderate and high-severity burns, the aboveground biomass increases as the burn scar ages.
 
-   **Figure 4a.**
+   **4a.**
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/54719919/84539151-e42bde80-acc0-11ea-8c91-6b51d7c6ff2e.png">
 </p>
 
-   **Figure 4b.**
+   **4b.**
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/54719919/84539159-e857fc00-acc0-11ea-86e0-2519fe9f1313.png">
@@ -48,29 +48,38 @@ and have a 30m resolution.
 
 **Figures 5a. and 5b.** are scatterplots showing the NEP at 2010 for the different-aged burn scars. The moderate-severity burned pixels and the high-severity burn pixels show slightly different trends. For moderate severity burns, the range of NEP values is narrower and the mean remain more consistent for every year following a burn compared to severe burns. For the severe burns, the range and mean of NEP values per pixel varies more when the burn scar is new. In Figure 4b, one can see that the mean NEP is negative for the first two years following a severe burn, meaning the stand becomes a carbon source during this time.
 
-  **Figure 5a.**
+  **5a.**
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/54719919/84539296-23f2c600-acc1-11ea-9b2a-5ae87d8a2c99.png">
 </p>
 
-  **Figure 5b.**
+  **5b.**
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/54719919/84539280-1e957b80-acc1-11ea-8487-c63688ec1fa0.png">
 </p>
 
-### Linear Regression Results
-**Moderate Burns**
+### Regression Results
+**Moderate Burns - Linear Regression**
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541010-84373700-acc4-11ea-907c-6098c3cc61d7.png">
 </p>
 
 <p align="left">
+  <img src="https://user-images.githubusercontent.com/54719919/84541012-84cfcd80-acc4-11ea-8561-f1afb823aaa2.png">
+</p>
+
+**Moderate Burns - Quadratic Regression**
+<p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541011-84373700-acc4-11ea-8aa4-6234b7e3d349.png">
 </p>
 
-**Severe Burns**
+<p align="left">
+  <img src="https://user-images.githubusercontent.com/54719919/84541013-84cfcd80-acc4-11ea-843c-427f66798d2d.png">
+</p>
+
+**Severe Burns - Linear Regression**
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541025-89948180-acc4-11ea-99df-9d5aef485481.png">
 </p>
@@ -79,18 +88,7 @@ and have a 30m resolution.
   <img src="https://user-images.githubusercontent.com/54719919/84541026-89948180-acc4-11ea-98c1-434bc46c605b.png">
 </p>
 
-
-### Quadratic Regression Results
-**Moderate Burns**
-<p align="left">
-  <img src="https://user-images.githubusercontent.com/54719919/84541012-84cfcd80-acc4-11ea-8561-f1afb823aaa2.png">
-</p>
-
-<p align="left">
-  <img src="https://user-images.githubusercontent.com/54719919/84541013-84cfcd80-acc4-11ea-843c-427f66798d2d.png">
-</p>
-
-**Severe Burns**
+**Severe Burns - Quadratic Regression**
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541027-8a2d1800-acc4-11ea-8b86-71c9ffd02dd8.png">
 </p>
