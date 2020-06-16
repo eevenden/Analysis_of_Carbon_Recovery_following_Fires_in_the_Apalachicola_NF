@@ -15,7 +15,7 @@ and have a 30m resolution.
 
 ## Methods
 ### Data Preprocessing
-**Figure 1.** is a screenshot of the dataframe I created through Pandas. This dataframe consists of 189,220 observations and 14 columns (not all pictured here). Each observation is a burned pixel. The columns used for the final analysis are the Date and Age of the fires, Forest Type, Burn Severity, Aboveground Biomass at 2010, and Net Ecosystem Productivity at 2010. Burn Severity was assigned based on a pixel's decrease in Biomass before and after a fire. See the code comments for additional information.
+**Figure 1.** is a screenshot of the dataframe I created through Pandas. This dataframe consists of 189,220 observations and 14 columns (not all pictured here). Each observation is a burned pixel. The columns used for the final analysis are the Date and Age of the fires, Forest Type, Burn Severity, Aboveground Biomass at 2010, and Net Ecosystem Productivity at 2010. Burn Severity was assigned based on a pixel's decrease in Aboveground Biomass before and after a fire. Specifically, I classified pixels as "Severe" burns if they lost over 70% of their aboveground biomass after a fire. Pixels which lost between 30-70% of their aboveground biomass were labeled as "Moderate." Much fewer pixels lost less than 30% of their aboveground biomass. Therefore, I removed them from this study.
 
 ![FL_Data_Screenshot](https://user-images.githubusercontent.com/54719919/84538971-9dd67f80-acc0-11ea-8d72-a9695f375f3d.png)
 
@@ -61,9 +61,12 @@ and have a 30m resolution.
 </p>
 
 ### Regression Results
-Below are the results of the linear and polynomial regressions used to model the relationship between aboveground biomass and burn scar age. For moderate burns, the linear and non-linear regressions have R-square values of .74 and .74 respectively. This mean both explain over 74% of the variance of aboveground biomass. For severe burns, the linear and non-linear regressions have R-square values of .84 and .86  Therefore, each model explained 84% and 86% of the variance of aboveground biomass.
 
-**Moderate Burns - Aboveground Biomass**
+**Aboveground Biomass**
+
+Below are the results of the linear and polynomial regressions used to model the relationship between aboveground biomass and burn scar age. For Moderate burns, the linear and non-linear regressions have R-square values of .74 and .74 respectively. This mean both explain over 74% of the variance of aboveground biomass. For Severe burns, the linear and non-linear regressions have R-square values of .84 and .86  Therefore, each model explained 84% and 86% of the variance of aboveground biomass.
+
+**Moderate Burns**
 
 *Linear Regression Results*
 <p align="left">
@@ -75,7 +78,7 @@ Below are the results of the linear and polynomial regressions used to model the
   <img src="https://user-images.githubusercontent.com/54719919/84541011-84373700-acc4-11ea-8aa4-6234b7e3d349.png">
 </p>
 
-**Severe Burns - Aboveground Biomass**
+**Severe Burns**
 
 *Linear Regression Results*
 <p align="left">
@@ -89,9 +92,11 @@ Below are the results of the linear and polynomial regressions used to model the
 
 Because there is little difference between the linear and polynomial models of aboveground biomass and burn scar age for both Moderate and Severe burns, I would advise using the linear regression results to analyze this relationship because it provides the simplest explanation of how aboveground biomass changes following a fire event.
 
-The results of both linear and polynomial regressions used to model the relationship between net ecosystem productivity and burn scar age are below. For Moderate burns, the linear regression has an R-square of .01 while the polynomial regression has an R-square of .01. This means both models perform very badly when describing the relationship between net ecosystem productivity and burn scar age for Moderate burns. 
+**Net Ecosystem Productivity**
 
-**Moderate Burns - Net Ecosystem Productivity**
+The results of both linear and polynomial regressions used to model the relationship between net ecosystem productivity and burn scar age are below. For Moderate burns, the linear regression has an R-square of .01 while the polynomial regression has an R-square of .01. For both models, burn scar age only explain over 1% and 2% of the variance of net ecosystem productivity. Therefore both models perform extremely poorly when describing the relationship between net ecosystem productivity and burn scar age for Moderate burns. This is improved only slightly when examining the regression results for Severe burns. In this case, the linear regression has an R-square of .08 while the polynomial regression has an R-square of .09. For both models, burn scar age only explain over 8% and 9% of the variance of net ecosystem productivity. Though the relationship between Net Ecosystem Productivity and Burn Scar Age is better modeled using polynomial equation, the polynomial regression still performs relatively poorly.
+
+**Moderate Burns**
 
 *Linear Regression Results*
 <p align="left">
@@ -103,7 +108,7 @@ The results of both linear and polynomial regressions used to model the relation
   <img src="https://user-images.githubusercontent.com/54719919/84541013-84cfcd80-acc4-11ea-843c-427f66798d2d.png">
 </p>
 
-**Severe Burns - Net Ecosystem Productivity**
+**Severe Burns**
 
 *Linear Regression Results*
 <p align="left">
@@ -115,9 +120,9 @@ The results of both linear and polynomial regressions used to model the relation
   <img src="https://user-images.githubusercontent.com/54719919/84541028-8a2d1800-acc4-11ea-9885-dc0ec1bf43be.png">
 </p>
 
-### F-Statistic Results for Net Ecosystem Productivity
-
 Because Burn Scar Age and Net Ecosystem Productvity were poorly modeled by both linear and polynomial regressions, I opted to run the F-statistic test to determine whether the  relationship between Net Ecosystem Productivity and Burn Scar Age had a relationship signifcantly different from an intercept model.
+
+### F-Statistic Results for Net Ecosystem Productivity
 
 For moderate burns, the relationship had a p-value less than the alpha (0.05) and therefore was signifcantly different from an intercept model.
 
@@ -131,4 +136,14 @@ For severe burns, the relationship also had a p-value less than the alpha (0.05)
   <img src="https://user-images.githubusercontent.com/54719919/84541024-89948180-acc4-11ea-852b-3294fa0081c8.png">
 </p>
 
-This means that Net Ecosystem Productivty does have a signifcant relationship with Burn Scar Age. Therefore, it's worth spending more time either (1) finding a more appropriate mathematical function to represent the relationship between Burn Scar Age and Net Ecosystem Productivity or (2) adjusting the time frame of thi study to focus only on the initial years following a burn when NEP is more volatile. 
+This means that Net Ecosystem Productivty does have a signifcant relationship with Burn Scar Age. Therefore, it's worth spending more time either (1) finding a more appropriate mathematical function to represent the relationship between Burn Scar Age and Net Ecosystem Productivity or (2) adjusting the time frame of this study to focus only on the initial years following a burn when NEP is more volatile. 
+
+### Conclusions & Improvements
+
+1. Aboveground Biomass increases as burn scars age for both moderate and severe burns. Of the models I created, the relationship is best described using a simple linear model.
+
+2. NEP does have a significant relationship with burn scar age, as determined by the F-statsitic. However, the two models used for this project do not capture this relationship well. Additional exploration using different types of regression may provide a better model of how Net Ecosystem Productivity changes over time.
+
+3. This study could be improved by finding or creating data layers with a smaller time interval. Specifically, I think analyzing Net Ecosystem Productivity requires a higher resolution dataset because NEP is highly volatile a for a window of several years after a fire. Therefore, using data with monthly of 6-month intervals would provide a better picture of how NEP changes over time.
+
+4. Additionally, with more time, I would find an MTBS data layer which describes fire severity rather than classify the burns based on aboveground biomass loss.I would do this because severity is also linked to belowground biomass loss. Therefore, only classifying fire severity based on aboveground biomass loss likely causes more fires to be classified as “high severity” than otherwise would be. 
