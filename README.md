@@ -63,7 +63,7 @@ and have a 30m resolution.
 ### Regression Results
 **Moderate Burns - Aboveground Biomass**
 
-One can find the results of both linear and polynomial regressions used to model the relationship between aboveground biomass and burn scar age below.
+Below are the results of the linear and polynomial regressions used to model the relationship between aboveground biomass and burn scar age. For moderate burns, the linear and non-linear regressions have R-square values of .74 and .74 respectively. This mean both explain over 74% of the variance of aboveground biomass. For severe burns, the linear and non-linear regressions have R-square values of .84 and .86  Therefore, each model explained 84% and 86% of the variance of aboveground biomass.
 
 *Linear Regression Results*
 <p align="left">
@@ -73,18 +73,6 @@ One can find the results of both linear and polynomial regressions used to model
 *Polynomial Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541011-84373700-acc4-11ea-8aa4-6234b7e3d349.png">
-</p>
-
-**Moderate Burns - Net Ecosystem Productivity**
-
-*Linear Regression Results*
-<p align="left">
-  <img src="https://user-images.githubusercontent.com/54719919/84541012-84cfcd80-acc4-11ea-8561-f1afb823aaa2.png">
-</p>
-
-*Polynomial Regression Results*
-<p align="left">
-  <img src="https://user-images.githubusercontent.com/54719919/84541013-84cfcd80-acc4-11ea-843c-427f66798d2d.png">
 </p>
 
 **Severe Burns - Aboveground Biomass**
@@ -98,6 +86,22 @@ One can find the results of both linear and polynomial regressions used to model
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541026-89948180-acc4-11ea-98c1-434bc46c605b.png">
 </p>
+
+Because there is little difference between the linear and polynomial models of aboveground biomass and burn scar age for both Moderate and Severe burns, I would advise using the linear regression results to analyze this relationship because it provides the simplest explanation of how aboveground biomass changes following a fire event.
+
+**Moderate Burns - Net Ecosystem Productivity**
+
+*Linear Regression Results*
+<p align="left">
+  <img src="https://user-images.githubusercontent.com/54719919/84541012-84cfcd80-acc4-11ea-8561-f1afb823aaa2.png">
+</p>
+
+*Polynomial Regression Results*
+<p align="left">
+  <img src="https://user-images.githubusercontent.com/54719919/84541013-84cfcd80-acc4-11ea-843c-427f66798d2d.png">
+</p>
+
+
 
 **Severe Burns - Net Ecosystem Productivity**
 
