@@ -64,7 +64,7 @@ and have a 30m resolution.
 
 **Aboveground Biomass**
 
-Below are the results of the linear and polynomial regressions used to model the relationship between aboveground biomass and burn scar age. For moderate burns, the linear and non-linear regressions have R-square values of .74 and .74 respectively. This mean both explain over 74% of the variance of aboveground biomass. For severe burns, the linear and non-linear regressions have R-square values of .84 and .86. Therefore, each model explained 84% and 86% of the variance of aboveground biomass.
+Below are the results of the linear and polynomial (quadratic) regressions used to model the relationship between aboveground biomass and burn scar age. For moderate burns, the linear and non-linear regressions have R-square values of .74 and .74 respectively. This mean both explain over 74% of the variance of aboveground biomass. For severe burns, the linear and non-linear regressions have R-square values of .84 and .86. Therefore, each model explained 84% and 86% of the variance of aboveground biomass.
 
 **Moderate Burns**
 
@@ -94,7 +94,7 @@ Because there is little difference between the linear and polynomial models of a
 
 **Net Ecosystem Productivity**
 
-The results of both linear and polynomial regressions used to model the relationship between net ecosystem productivity and burn scar age are below. For moderate burns, the linear regression has an R-square of .01 while the polynomial regression has an R-square of .01. For both models, burn scar age only explain over 1% and 2% of the variance of net ecosystem productivity. Therefore both models perform extremely poorly when describing the relationship between net ecosystem productivity and burn scar age for moderate burns. This is improved only slightly when examining the regression results for severe burns. In this case, the linear regression has an R-square of .08 while the polynomial regression has an R-square of .09. For both models, burn scar age only explain over 8% and 9% of the variance of net ecosystem productivity. Though the relationship between Net Ecosystem Productivity and Burn Scar Age is better modeled using polynomial equation, the polynomial regression still performs relatively poorly.
+The results of both linear and polynomial (quadratic) regressions used to model the relationship between net ecosystem productivity and burn scar age are below. For moderate burns, the linear regression has an R-square of .01 while the polynomial regression has an R-square of .01. For both models, burn scar age only explain over 1% and 2% of the variance of net ecosystem productivity. Therefore both models perform extremely poorly when describing the relationship between net ecosystem productivity and burn scar age for moderate burns. This is improved only slightly when examining the regression results for severe burns. In this case, the linear regression has an R-square of .08 while the polynomial regression has an R-square of .09. For both models, burn scar age only explain over 8% and 9% of the variance of net ecosystem productivity. Though the relationship between Net Ecosystem Productivity and Burn Scar Age is better modeled using polynomial equation, the polynomial regression still performs relatively poorly.
 
 **Moderate Burns**
 
