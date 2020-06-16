@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 #Title: Creating and Cleaning A Pandas Dataframe and Conducting Regression Analysis for Carbon Recovery - Florida Fire Study
 #Author: Emily Evenden
 #Date: May 22, 2020
@@ -38,14 +35,8 @@ import matplotlib.pyplot as plt
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-# In[2]:
-
-
 #Set working directory
 dir = os.chdir("C:\\Users\\Emily\\Documents\\Summer_2020\\Py_DataScience_and_MachineLearning\\original\\FL_Script\\Python_FL_Project\\Python_FL_Project")
-
-
-# In[3]:
 
 
 ### PART 1: DATA FRAME CREATION & CLEAN UP
@@ -72,9 +63,6 @@ Burn_Year = np.asarray(Image.open('Smaller_FL_years_disturb_MTSB.tif'))
 print('Ok')
 
 
-# In[4]:
-
-
 #This section flattens each array so the 2D data is converted to 1D data. This allows each raster layer to become a column in the dataframe.
 
 FL_AGB_1990 = AGB_1990.flatten()
@@ -90,14 +78,8 @@ FL_Burn_Year = Burn_Year.flatten()
 print('Ok')
 
 
-# In[5]:
-
-
 #Here I stack all of the flattened arrays and transpose them into vertical columns. This creates a larger 2D array, FL_arr, from the multiple 1D arrays.
 FL_arr = np.vstack([FL_AGB_1990, FL_AGB_2000, FL_AGB_2010, FL_Forest_Type, FL_NEP_1990, FL_NEP_2000, FL_NEP_2010, FL_Burn_Year]).T
-
-
-# In[6]:
 
 
 #A Pandas dataframe was then created from with the vertically stacked 2D array, FL_arr, and assigned column names.
@@ -105,9 +87,6 @@ FL_Data = pd.DataFrame(FL_arr, columns=['AGB_1990', 'AGB_2000','AGB_2010', 'Fore
 
 #Check point. This shows the column names and first five entries. 
 FL_Data.head()
-
-
-# In[7]:
 
 
 '''
@@ -125,9 +104,6 @@ FL_Data = FL_Data[(FL_Data.Burn_Year != 0) & (FL_Data.Burn_Year != 16) & (FL_Dat
 
 #Check that pixels with unwanted years were removed
 FL_Data['Burn_Year'].unique()
-
-
-# In[8]:
 
 
 '''
@@ -151,9 +127,6 @@ FL_Data['Burn_Scar_Age'] = 40 - FL_Data['Burn_Year']
 print (FL_Data)
 
 
-# In[9]:
-
-
 #I want to create categorize the pixel as having a burn severity of High, Medium, and Low. 
 #I decided the assign these labels based on the percent of aboveground biomass lost by a pixel following a fire.
 
@@ -165,9 +138,6 @@ FL_Data.loc[(FL_Data.Date>2000), 'Burn_Severity'] = ((FL_Data['AGB_2000']-FL_Dat
 
 #Check point
 print (FL_Data)
-
-
-# In[10]:
 
 
 #After creating a numeric variable to measure burn severity, I want to place pixels into categorical bins.
@@ -184,9 +154,6 @@ FL_Data['Severity_Label'] = pd.cut(FL_Data['Burn_Severity'], bins=cut_bins, labe
 print (FL_Data)
 
 
-# In[11]:
-
-
 #Additionally, I want to replace the numeric codes signifying 'Forest_Type' with descriptive str labels because it's more intuitive to read.
 #First I create a list of the str forest type names
 forest_type_list = ['White/Red/Jack Pine', 'Spruce/Fir', 'Longleaf/Slash Pine', 'Loblolly/Shortleaf Pine', 'Pinyon/Juniper', 'Oak/Pine', 'Oak/Hickory', 'Oak/Gum/Cypress', 'Elm/Ash/Cottonwood', 'Maple/Beech/Birch', 'Tropical Hardwoods', 'Exotic Hardwoods']
@@ -201,14 +168,8 @@ forest_dict = dict(zip(code_list, forest_type_list))
 FL_Data['Forest_Type'].replace(forest_dict, inplace=True)
 
 
-# In[12]:
-
-
 #Here, I drop any rows which have null values. 
 FL_Data.dropna(axis=0, how='any')       
-
-
-# In[14]:
 
 
 '''
@@ -227,18 +188,12 @@ FL_Data.drop(indexNames2, inplace=True)
 FL_Data.drop(indexNames, inplace=True)
 
 
-# In[15]:
-
-
 #Even through "Low Severity" now longer contains any observations, it still appears as a category in graphs. 
 #Therefore, I had to drop the "unused" category
 FL_Data.Severity_Label = FL_Data.Severity_Label.cat.remove_unused_categories()
 
 #Here I checked the count for each category - "Low Severity" doesn't appear
 FL_Data["Severity_Label"].value_counts()
-
-
-# In[17]:
 
 
 ### PART 2: DATA VISUALIZATION WITH SEABORN
@@ -266,9 +221,6 @@ for t, l in zip(leg.texts, new_labels): t.set_text(l)
 
 #Output this image are a PNG file
 plt.savefig("Histogram_Severity.png")
-
-
-# In[23]:
 
 
 #Create a scatterplot of Aboveground Biomass and Net Ecosystem Productivity to examine multicollinearity
@@ -306,9 +258,6 @@ plt.tight_layout()
 plt.savefig("Scatterplot_AGB_NEP.png")
 
 
-# In[147]:
-
-
 #Create a FacetGrid plot to compare how Aboveground Biomass recovers as a Burn Scar ages
 lm = sns.lmplot(x="Burn_Scar_Age", y="AGB_2010", col="Severity_Label", hue="Severity_Label", data=FL_Data,
            col_wrap=2, ci=None, palette="muted", height=4,
@@ -336,9 +285,6 @@ fig.tight_layout()
 
 #Output this image are a PNG file
 plt.savefig("FacetGrid_AGB_Raw.png")
-
-
-# In[148]:
 
 
 #Here, I create another FacetPlot both instead its for the mean values of Aboveground Biomass. 
@@ -370,9 +316,6 @@ fig.tight_layout()
 plt.savefig("FacetGrid_AGB_Mean.png")
 
 
-# In[149]:
-
-
 #Create a FacetGrid plot to compare how Net Ecosystem Productivity recovers as a Burn Scar ages
 lm2 = sns.lmplot(x="Burn_Scar_Age", y="NEP_2010", col="Severity_Label", hue="Severity_Label", data=FL_Data,
            col_wrap=2, ci=None, palette="muted", height=4,
@@ -397,9 +340,6 @@ fig.tight_layout()
 
 #Export the plot
 plt.savefig("FacetGrid_NEP_Raw.png")
-
-
-# In[150]:
 
 
 #Finally, make a plot for mean NEP so we can see the trends more clearly
@@ -428,9 +368,6 @@ fig.tight_layout()
 plt.savefig("FacetGrid_NEP_Mean.png")
 
 
-# In[151]:
-
-
 #Create separate dataframes for Moderate and Severe burns in order to run two separate Regression Analysis
 #Create dataframe for moderate burns
 Mod_FL = FL_Data[(FL_Data['Severity_Label'] == 'Moderate')]
@@ -439,10 +376,7 @@ Sev_FL = FL_Data[(FL_Data['Severity_Label'] == 'Severe')]
 print ("Ok")
 
 
-# In[152]:
-
-
-#I created a function to run a Linear Regression. This allows me to call the same 
+#I created a function to run a Linear Regression. This allows me to call the same function multiple times.
 
 def LinReg(x,y):
     #Split test data
@@ -500,36 +434,19 @@ def LinReg(x,y):
     plt.ylabel("Frequency")
 
 
-# In[117]:
-
-
 #Run Regression for Burn Scar Age and Moderate Fire Abovegorund Biomass
 LinReg(Mod_FL['Burn_Scar_Age'], Mod_FL['AGB_2010'])
-
-
-# In[53]:
-
 
 #Run Regression for Burn Scar Age and Severe Fire Aboveground Biomass
 LinReg(Sev_FL['Burn_Scar_Age'], Sev_FL['AGB_2010'])
 
-
-# In[54]:
-
-
 #Run Regression for Burn Scar Age and Moderate Fire Net Ecosystem Productivity
 LinReg(Mod_FL['Burn_Scar_Age'], Mod_FL['NEP_2010'])
-
-
-# In[55]:
-
 
 #Run Regression for Burn Scar Age and Severe Fire Net Ecosystem Productivity
 LinReg(Sev_FL['Burn_Scar_Age'], Sev_FL['NEP_2010'])
 
-
-# In[140]:
-
+#I created a function to run a Polynomial (Quadratic) Regression.
 
 def QuadReg(x,y):
     from  sklearn.model_selection import train_test_split
@@ -596,33 +513,17 @@ def QuadReg(x,y):
     plt.xlabel("Residual Value")
     plt.ylabel("Frequency")
 
-
-# In[141]:
-
-
+#Run Regression for Burn Scar Age and Moderate Fire AGB
 QuadReg(Mod_FL['Burn_Scar_Age'], Mod_FL['AGB_2010'])
 
-
-# In[142]:
-
-
+#Run Regression for Burn Scar Age and Severe Fire AGB
 QuadReg(Sev_FL['Burn_Scar_Age'], Sev_FL['AGB_2010'])
 
-
-# In[143]:
-
-
+#Run Regression for Burn Scar Age and Moderate Fire NEP
 QuadReg(Mod_FL['Burn_Scar_Age'], Mod_FL['NEP_2010'])
 
-
-# In[144]:
-
-
+#Run Regression for Burn Scar Age and Severe Fire NEP
 QuadReg(Sev_FL['Burn_Scar_Age'], Sev_FL['NEP_2010'])
-
-
-# In[145]:
-
 
 #Run Fstat to see if the NEP Data is sifnficantly different from intercept model
 
@@ -644,22 +545,8 @@ def F_stat(x,y):
     print ("The F-score is: %s" %F)
     print ("The p-value is: %s" %p)
     
-
-
-# In[146]:
-
-
+#Run F-Test for Burn Scar Age and Moderate Fire NEP
 F_stat(Mod_FL['Burn_Scar_Age'], Mod_FL['NEP_2010'])
 
-
-# In[127]:
-
-
+#Run F-Test for Burn Scar Age and Severe Fire NEP
 F_stat(Sev_FL['Burn_Scar_Age'], Sev_FL['NEP_2010'])
-
-
-# In[ ]:
-
-
-
-
