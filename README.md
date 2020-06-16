@@ -62,40 +62,51 @@ and have a 30m resolution.
 
 ### Regression Results
 **Moderate Burns - Aboveground Biomass**
+
 One can find the results of both linear and polynomial regressions used to model the relationship between aboveground biomass and burn scar age below.
 
+*Linear Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541010-84373700-acc4-11ea-907c-6098c3cc61d7.png">
 </p>
 
+*Polynomial Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541011-84373700-acc4-11ea-8aa4-6234b7e3d349.png">
 </p>
 
 **Moderate Burns - Net Ecosystem Productivity**
 
+*Linear Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541012-84cfcd80-acc4-11ea-8561-f1afb823aaa2.png">
 </p>
 
+*Polynomial Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541013-84cfcd80-acc4-11ea-843c-427f66798d2d.png">
 </p>
 
 **Severe Burns - Aboveground Biomass**
+
+*Linear Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541025-89948180-acc4-11ea-99df-9d5aef485481.png">
 </p>
 
+*Polynomial Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541026-89948180-acc4-11ea-98c1-434bc46c605b.png">
 </p>
 
 **Severe Burns - Net Ecosystem Productivity**
+
+*Linear Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541027-8a2d1800-acc4-11ea-8b86-71c9ffd02dd8.png">
 </p>
 
+*Polynomial Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541028-8a2d1800-acc4-11ea-9885-dc0ec1bf43be.png">
 </p>
