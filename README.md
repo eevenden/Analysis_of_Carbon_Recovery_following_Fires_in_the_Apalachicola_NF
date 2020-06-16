@@ -61,27 +61,23 @@ and have a 30m resolution.
 </p>
 
 ### Regression Results
-**Moderate Burns - Aboveground Biomass**
-
 Below are the results of the linear and polynomial regressions used to model the relationship between aboveground biomass and burn scar age. For moderate burns, the linear and non-linear regressions have R-square values of .74 and .74 respectively. This mean both explain over 74% of the variance of aboveground biomass. For severe burns, the linear and non-linear regressions have R-square values of .84 and .86  Therefore, each model explained 84% and 86% of the variance of aboveground biomass.
 
+**Moderate Burns - Aboveground Biomass**
 *Linear Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541010-84373700-acc4-11ea-907c-6098c3cc61d7.png">
 </p>
-
 *Polynomial Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541011-84373700-acc4-11ea-8aa4-6234b7e3d349.png">
 </p>
 
 **Severe Burns - Aboveground Biomass**
-
 *Linear Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541025-89948180-acc4-11ea-99df-9d5aef485481.png">
 </p>
-
 *Polynomial Regression Results*
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541026-89948180-acc4-11ea-98c1-434bc46c605b.png">
