@@ -1,4 +1,4 @@
-# Analyzing Carbon Dynamics following Fires in Longleaf & Slash Pine Stands of the Appalachicola National Forest
+# Analyzing Carbon Dynamics following Fires in Longleaf & Slash Pine Stands of the Apalachicola National Forest
 
 ## Introduction
 The purpose of this script to to use advanced Python packages to create a dataframe from multiple geospatial raster layers. 
