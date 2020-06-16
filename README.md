@@ -61,8 +61,8 @@ and have a 30m resolution.
 </p>
 
 ### Regression Results
-**Moderate Burns - Linear Regression**
-One can find the results of both linear and non-linear regressions used to model the relationship between aboveground biomass and burn scar age below.
+**Moderate Burns - Aboveground Biomass**
+One can find the results of both linear and polynomial regressions used to model the relationship between aboveground biomass and burn scar age below.
 
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541010-84373700-acc4-11ea-907c-6098c3cc61d7.png">
@@ -72,7 +72,7 @@ One can find the results of both linear and non-linear regressions used to model
   <img src="https://user-images.githubusercontent.com/54719919/84541011-84373700-acc4-11ea-8aa4-6234b7e3d349.png">
 </p>
 
-**Moderate Burns - Quadratic Regression**
+**Moderate Burns - Net Ecosystem Productivity**
 
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541012-84cfcd80-acc4-11ea-8561-f1afb823aaa2.png">
@@ -82,7 +82,7 @@ One can find the results of both linear and non-linear regressions used to model
   <img src="https://user-images.githubusercontent.com/54719919/84541013-84cfcd80-acc4-11ea-843c-427f66798d2d.png">
 </p>
 
-**Severe Burns - Linear Regression**
+**Severe Burns - Aboveground Biomass**
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541025-89948180-acc4-11ea-99df-9d5aef485481.png">
 </p>
@@ -91,7 +91,7 @@ One can find the results of both linear and non-linear regressions used to model
   <img src="https://user-images.githubusercontent.com/54719919/84541026-89948180-acc4-11ea-98c1-434bc46c605b.png">
 </p>
 
-**Severe Burns - Quadratic Regression**
+**Severe Burns - Net Ecosystem Productivity**
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541027-8a2d1800-acc4-11ea-8b86-71c9ffd02dd8.png">
 </p>
@@ -100,13 +100,20 @@ One can find the results of both linear and non-linear regressions used to model
   <img src="https://user-images.githubusercontent.com/54719919/84541028-8a2d1800-acc4-11ea-9885-dc0ec1bf43be.png">
 </p>
 
-### F-Statistic Results
+### F-Statistic Results for Net Ecosystem Productivity
+
+Because Burn Scar Age and Net Ecosystem Productvity were poorly modeled by both linear and polynomial regressions, I opted to run the F-statistic test to determine whether the  relationship between Net Ecosystem Productivity and Burn Scar Age had a relationship signifcantly different from an intercept model.
+
+For moderate burns, the relationship had a p-value less than the alpha (0.05) and therefore was signifcantly different from an intercept model.
 
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541023-89948180-acc4-11ea-8058-696b55d432fe.png">
 </p>
 
+For severe burns, the relationship also had a p-value less than the alpha (0.05) and therefore was signifcantly different from an intercept model.
+
 <p align="left">
   <img src="https://user-images.githubusercontent.com/54719919/84541024-89948180-acc4-11ea-852b-3294fa0081c8.png">
 </p>
 
+This means that Net Ecosystem Productivty does have a signifcant relationship with Burn Scar Age. Therefore, it's worth spending more time either (1) finding a more appropriate mathematical function to represent the relationship between Burn Scar Age and Net Ecosystem Productivity or (2) adjusting the time frame of thi study to focus only on the initial years following a burn when NEP is more volatile. 
