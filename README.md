@@ -67,12 +67,13 @@ and have a 30m resolution.
 </p>
 
 <p align="left">
-  <img src="https://user-images.githubusercontent.com/54719919/84541012-84cfcd80-acc4-11ea-8561-f1afb823aaa2.png">
+  <img src="https://user-images.githubusercontent.com/54719919/84541011-84373700-acc4-11ea-8aa4-6234b7e3d349.png">
 </p>
 
 **Moderate Burns - Quadratic Regression**
+
 <p align="left">
-  <img src="https://user-images.githubusercontent.com/54719919/84541011-84373700-acc4-11ea-8aa4-6234b7e3d349.png">
+  <img src="https://user-images.githubusercontent.com/54719919/84541012-84cfcd80-acc4-11ea-8561-f1afb823aaa2.png">
 </p>
 
 <p align="left">
